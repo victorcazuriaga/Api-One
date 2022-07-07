@@ -2,11 +2,10 @@ const { application } = require("express");
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+require("dotenv/config");
 const app = express();
 const port = 3001;
-const knex = require("knex");
-const knexConfig = require("./knexfile");
-const db = knex(knexConfig.development);
+const db = require("./dbconfig");
 
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
@@ -26,7 +25,8 @@ const verifyJwt = (req, res, next) => {
   });
 };
 //teste raiz
-app.get("/", verifyJwt, (req, res) => {
+app.get("/", (req, res) => {
+  console.log(process.env.DATABASE_URL);
   res.send(secretInfo);
 });
 
