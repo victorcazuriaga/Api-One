@@ -104,6 +104,6 @@ app.post("/users/login", async (req, res) => {
 });
 app.delete("/users", (req, res) => {});
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log("iniciou");
 });
