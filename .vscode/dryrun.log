@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/victorcazuriaga/Desktop/ApiCapstone'
+npx knex migrate:down
+make: Leaving directory `/Users/victorcazuriaga/Desktop/ApiCapstone'
+ 
