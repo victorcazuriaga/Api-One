@@ -1,10 +1,9 @@
-const { application } = require("express");
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 require("dotenv/config");
 const app = express();
-const port = 3001;
+const port = 3007;
 const db = require("./dbconfig");
 
 app.use(express.json()); // for parsing application/json
@@ -14,6 +13,7 @@ const PRIVATEKEY =
 const users = [];
 const secretInfo = "qualquercoisa";
 const saltRounds = 10;
+
 //verificação JWT
 const verifyJwt = (req, res, next) => {
   const token = req.headers.authorization.split(" ")[1];
@@ -26,8 +26,7 @@ const verifyJwt = (req, res, next) => {
 };
 //teste raiz
 app.get("/", (req, res) => {
-  console.log(process.env.DATABASE_URL);
-  res.send(secretInfo);
+  res.send("secretInfo");
 });
 
 app.get("/clientes", async (req, res) => {
@@ -35,23 +34,21 @@ app.get("/clientes", async (req, res) => {
   res.json(user);
 });
 
-//rota para agendar coleta
-app.post("/", async (req, res) => {});
 //usu corp
-app.post("/users/signup/corp", async (req, res) => {
-  const data = req.body;
-  if (data.password && data.email) {
-    try {
-      const [id] = await db("/user_corp").insert(data);
-      console.log(id);
-      return res.send("registrado");
-    } catch (error) {
-      return res.status(400).json(error);
-    }
-  } else {
-    return res.status(400).send("campos invalidos");
-  }
-});
+// app.post("/users/signup/corp", async (req, res) => {
+//   const data = req.body;
+//   if (data.password && data.email) {
+//     try {
+//       const [id] = await db("/user_corp").insert(data);
+//       console.log(id);
+//       return res.send("registrado");
+//     } catch (error) {
+//       return res.status(400).json(error);
+//     }
+//   } else {
+//     return res.status(400).send("campos invalidos");
+//   }
+// });
 
 //  app.post("/users/login/corp", (req,res)=> {
 //     const data = req.body
@@ -76,8 +73,10 @@ app.post("/users/signup", async (req, res) => {
   if (data.password && data.email && data.name) {
     try {
       bcrypt.hash(data.password, saltRounds, async (err, hash) => {
-        const [id] = await db("user").insert({ ...data, password: hash });
-
+        const [user] = await db("user").insert({ ...data, password: hash }, [
+          "id",
+        ]);
+        console.log(user.id);
         return res.send("registrado");
       });
     } catch (error) {
@@ -103,7 +102,7 @@ app.post("/users/login", async (req, res) => {
     return res.status(400).send("campos invalidos");
   }
 });
-// app.delete("/users", (req,res)=> { })
+app.delete("/users", (req, res) => {});
 
 app.listen(port, () => {
   console.log("iniciou");
