@@ -35,32 +35,34 @@ app.get("/clientes", async (req, res) => {
 });
 
 //usu corp
-// app.post("/users/signup/corp", async (req, res) => {
-//   const data = req.body;
-//   if (data.password && data.email) {
-//     try {
-//       const [id] = await db("/user_corp").insert(data);
-//       console.log(id);
-//       return res.send("registrado");
-//     } catch (error) {
-//       return res.status(400).json(error);
-//     }
-//   } else {
-//     return res.status(400).send("campos invalidos");
-//   }
-// });
+app.post("/users/signup/corp", async (req, res) => {
+  const data = req.body;
+  if (data.password && data.email) {
+    try {
+      const [id] = await db("/user_corp").insert(data);
+      console.log(id);
+      return res.send("registrado");
+    } catch (error) {
+      return res.status(400).json(error);
+    }
+  } else {
+    return res.status(400).send("campos invalidos");
+  }
+});
 
-//  app.post("/users/login/corp", (req,res)=> {
-//     const data = req.body
-//     const user = users.find((user) => user.email === data.email && user.password === data.password )
-//     console.log(user)
-//     if(user){
-//         const token = jwt.sign(user,PRIVATEKEY, { expiresIn:"1h" })
-//         return res.json({token:token})
-//     }else{
-//         return res.status(400).send("campos invalidos")
-//     }
-//  })
+app.post("/users/login/corp", (req, res) => {
+  const data = req.body;
+  const user = users.find(
+    (user) => user.email === data.email && user.password === data.password
+  );
+  console.log(user);
+  if (user) {
+    const token = jwt.sign(user, PRIVATEKEY, { expiresIn: "1h" });
+    return res.json({ token: token });
+  } else {
+    return res.status(400).send("campos invalidos");
+  }
+});
 
 // user doador
 
