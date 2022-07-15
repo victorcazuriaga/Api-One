@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Thu Jul  7 19:19:41 2022
+# Make data base, printed on Thu Jul 14 20:37:01 2022
 
 # Variables
 
@@ -18,10 +15,6 @@ make: *** No rule to make target `all'.  Stop.
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
-VSCODE_LOG_NATIVE = false
 # environment
 NVM_INC = /Users/victorcazuriaga/.nvm/versions/node/v16.15.1/include/node
 # automatic
@@ -35,39 +28,31 @@ CURDIR := /Users/victorcazuriaga/Desktop/ApiCapstone
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"pt-br","availableLanguages":{"*":"pt-br"},"_languagePackId":"195456cb6bc5e7dd989215cd334fb359.pt-br","_translationsConfigFile":"/Users/victorcazuriaga/Library/Application Support/Code/clp/195456cb6bc5e7dd989215cd334fb359.pt-br/tcf.json","_cacheRoot":"/Users/victorcazuriaga/Library/Application Support/Code/clp/195456cb6bc5e7dd989215cd334fb359.pt-br","_resolvedLanguagePackCoreLocation":"/Users/victorcazuriaga/Library/Application Support/Code/clp/195456cb6bc5e7dd989215cd334fb359.pt-br/30d9c6cd9483b2cc586687151bcbcd635f373630","_corruptedFile":"/Users/victorcazuriaga/Library/Application Support/Code/clp/195456cb6bc5e7dd989215cd334fb359.pt-br/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"pt-br","availableLanguages":{"*":"pt-br"},"_languagePackId":"dc7ba51c4efcfec965eaa07de065afd6.pt-br","_translationsConfigFile":"/Users/victorcazuriaga/Library/Application Support/Code/clp/dc7ba51c4efcfec965eaa07de065afd6.pt-br/tcf.json","_cacheRoot":"/Users/victorcazuriaga/Library/Application Support/Code/clp/dc7ba51c4efcfec965eaa07de065afd6.pt-br","_resolvedLanguagePackCoreLocation":"/Users/victorcazuriaga/Library/Application Support/Code/clp/dc7ba51c4efcfec965eaa07de065afd6.pt-br/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a","_corruptedFile":"/Users/victorcazuriaga/Library/Application Support/Code/clp/dc7ba51c4efcfec965eaa07de065afd6.pt-br/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/9n/9nr2fr_x29s1p6_fbng32d_c0000gn/T/vscode-ipc-ee4aab18-3f71-413c-ad11-2ae79dd97171.sock
-# environment
-VSCODE_CWD = /Users/victorcazuriaga/Desktop/ApiCapstone
+VSCODE_CWD = /
 # environment
 PATH = /Users/victorcazuriaga/.nvm/versions/node/v16.15.1/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 # environment
 NVM_BIN = /Users/victorcazuriaga/.nvm/versions/node/v16.15.1/bin
 # environment
-VSCODE_LOG_STACK = false
-# environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.dVB1K3yYFP/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.wJiFaSo6LV/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_PIPE_LOGGING = true
-# environment
-PWD = /Users/victorcazuriaga/desktop/ApiCapstone
+PWD = /Users/victorcazuriaga/Desktop/ApiCapstone
 # environment
 HOMEBREW_CELLAR = /opt/homebrew/Cellar
 # environment
@@ -81,9 +66,7 @@ HOME = /Users/victorcazuriaga
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CLI = 1
-# environment
-VSCODE_CODE_CACHE_PATH = /Users/victorcazuriaga/Library/Application Support/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+VSCODE_CODE_CACHE_PATH = /Users/victorcazuriaga/Library/Application Support/Code/CachedData/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
 # environment
 LOGNAME = victorcazuriaga
 # environment
@@ -101,21 +84,17 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 3
+SHLVL = 1
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = victorcazuriaga
 # makefile
 .DEFAULT_GOAL := dbdown
-# environment
-TERM_SESSION_ID = CBE7477C-32C2-49B0-A1B7-BCFB5953FEA1
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
-# environment
-TERM_PROGRAM = Apple_Terminal
 # default
 .VARIABLES := 
 # environment
@@ -123,7 +102,9 @@ TMPDIR = /var/folders/9n/9nr2fr_x29s1p6_fbng32d_c0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/victorcazuriaga/Library/Application Support/Code/1.68.1-main.sock
+VSCODE_IPC_HOOK = /Users/victorcazuriaga/Library/Application Support/Code/1.69.1-main.sock
+# environment
+MallocNanoZone = 0
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -131,11 +112,9 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-TERM_PROGRAM_VERSION = 445
-# environment
 NVM_DIR = /Users/victorcazuriaga/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.23971199.23971205.6350F824-0548-4868-B9BF-D8A6DDF85051
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.28302444.28302450
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -163,11 +142,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 5553
+VSCODE_PID = 3920
 # variable set hash-table stats:
-# Load=76/1024=7%, Rehash=0, Collisions=1/99=1%
+# Load=66/1024=6%, Rehash=0, Collisions=1/89=1%
 
 # Pattern-specific Variable Values
 
@@ -175,7 +152,7 @@ VSCODE_PID = 5553
 
 # Directories
 
-# . (device 16777233, inode 26880682): 16 files, no impossibilities.
+# . (device 16777231, inode 26880682): 16 files, no impossibilities.
 
 # 16 files, no impossibilities in 1 directories.
 
@@ -251,6 +228,8 @@ dbdown:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jul  7 19:19:41 2022
+# Finished Make data base on Thu Jul 14 20:37:01 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
